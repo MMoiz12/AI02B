@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://www.example.com">Example</a></li>
+            <li><a href="https://www.example.com/about">About</a></li>
+            <li><a href="https://www.example.com/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome to the Example Page</h1>
+        <p>This is a simple example page with a navigation menu.</p>
+        <p>Feel free to explore the links in the navigation menu.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 Example Company</p>
+        <p><a href="https://www.example.com/privacy">Privacy Policy</a></p>
+        <p><a href="https://www.example.com/terms">Terms of Service</
+p>p>
+    </footer>   
+    <script>
+        console.log("Welcome to the Example Page!");
+        document.querySelector('h1').addEventListener('click', function() {
+            alert('You clicked the heading!');
+        });
+        document.querySelector('nav').addEventListener('mouseover', function() {
+            console.log('Mouse is over the navigation menu');
+        });
+        document.querySelector('nav').addEventListener('mouseout', function() {
+            console.log('Mouse left the navigation menu');
+        });
+        document.querySelector('nav').addEventListener('click', function(event) {
+            if (event.target.tagName === 'A') {
+                console.log('Link clicked:', event.target.href);
+            }
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        @media (max-width: 600px) {
+            nav li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #ffffff;
+            }
+            nav {
+                background-color: #1f1f1f;
+            }
+            footer {
+                color: #bbbbbb;
+            }
+        }
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #ffffff;
+                color: #000000;
+            }
+            nav {
+                background-color: #f0f0f0;
+            }
+            footer {
+                color: #333333;
+            }
+        }
+        @supports (display: grid) {
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            nav li {
+                text-align: center;
+            }
+        }
+        @supports not (display: grid) {
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            nav li {
+                flex: 1 1 auto;
+                text-align: center;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @media (hover: hover) {
+            nav a:hover {
+                background-color: #555;
+            }
+        }
+        @media (hover: none) {
+            nav a {
+                background-color: #333;
+            }
+        }
+        @media (max-width: 400px) {
+            body {
+                font-size: 14px;
+            }
+            nav li {
+                margin-right: 5px;
+            }
+        }
+        @media (min-width: 1200px) {
+            body {
+                font-size: 18px;
+            }
+            nav li {
+                margin-right: 20px;
+            }
+        }
+        @media (max-width: 800px) {
+            main {
+                font-size: 16px;
+            }
+            footer {
+                font-size: 0.9em;
+            }
+        }
+        </style>
+</body>
+</html>
